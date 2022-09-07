@@ -1,4 +1,4 @@
-let numero1 = (prompt("Ingrese su numero"));
+let numero1 = (prompt("Ingrese su numero o ingrese ESC para terminar el programa"));
 
 while(numero1 != "ESC"){
 
@@ -9,5 +9,5 @@ while(numero1 != "ESC"){
         alert("Tu numero es impar");
     };
 
-    numero1 = (prompt("Ingrese su numero"));
+    numero1 = (prompt("Ingrese su numero o ingrese ESC para terminar el programa"));
 };
