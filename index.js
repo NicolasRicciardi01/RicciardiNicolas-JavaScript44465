@@ -1,4 +1,4 @@
-let numero1 = (prompt("Ingrese su numero o ingrese ESC para terminar el programa"));
+let numero1 = (prompt("Su número es par o impar? Ingrese su número o ingrese ESC para terminar el programa"));
 
 while(numero1 != "ESC"){
 
