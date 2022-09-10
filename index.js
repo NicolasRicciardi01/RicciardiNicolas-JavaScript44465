@@ -1,39 +1,29 @@
-/* let numero1 = (prompt("Su número es par o impar? Ingrese su número o ingrese ESC para terminar el programa"));
-
-while(numero1 != "ESC"){
-
-    if(numero1 %2 === 0){
-        alert("Tu numero es par");
+/* Funcion para calcular los dolares */
+function dolar(numero, tipo){
+    switch(tipo){
+        case "oficial":
+            return numero * 139;
+            break;
+        case "blue":
+            return numero * 270;
+            break;
+        case "liqui":
+            return numero * 280;
+            break;
+        default :
+        console.log("Tipo de dolar no identificado");
+        break;
     }
-    else{
-        alert("Tu numero es impar");
-    };
+}
 
-    numero1 = (prompt("Ingrese su numero o ingrese ESC para terminar el programa"));
-}; */
+let resultado = dolar();
+let tipoDolar = (prompt("Ingrese el tipo de dolar al que quiere cambiar sus pesos: oficial, blue o liqui (Ingrese ESC para salir del programa)"));
+let pesos = (prompt("Ingrese, sin el simbolo $, la cantidad de pesos a cambiar"));
+let mensaje = (`$${pesos} son $${dolar(pesos, tipoDolar)} USD al cambio ${tipoDolar}`);
 
-
-class Producto{
-    constructor(nombre, imagen, precio, cantidad){
-        this.nombre = nombre;
-        this.precio = precio;
-        this.imagen = imagen;
-        this.vendido = false;
-        this.cantidad = cantidad;
-    }
-
-    vender(){
-        if(this.cantidad === 0 ){
-            this.vendido = false;
-        }
-        else{
-            this.cantidad = this.cantidad - 1;
-        }
-    }
-    }
-
-    const producto1 = new Producto("monitor", "htt", 1234, 5);
-    console.log(producto1);
-
-    producto1.vender();
-    console.log(producto1);
+while(tipoDolar != "ESC"){
+    alert(mensaje);
+    tipoDolar = prompt("Ingrese el tipo de dolar al que quiere cambiar sus pesos: oficial, blue o liqui (Ingrese ESC para salir del programa)");
+    pesos = prompt("Ingrese, sin el simbolo $, la cantidad de pesos a cambiar");
+    mensaje = (`$${pesos} son $${dolar(pesos, tipoDolar)} USD al cambio ${tipoDolar}`);
+};
