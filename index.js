@@ -20,6 +20,7 @@ function dolar(numero, tipoDolar){
         case liqui.nombre:
             return numero * liqui.precio;
         default :
+            return "ERROR DOLAR NO IDENTIFICADO";
         console.log("Tipo de dolar no identificado");
         break;
     };
