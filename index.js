@@ -38,11 +38,21 @@ function nameVerif(dNombre){
 let tipoDolar = prompt(`Ingrese el tipo de dolar al que quiere cambiar sus pesos: ${nombres.join(" - ")} (Ingrese ESC para salir del programa)`);
 let pesos = prompt("Ingrese, sin el simbolo $, la cantidad de dolares a cambiar");
 let uHtml = document.getElementById("usdHtml").innerHTML;
+const miBtn = document.getElementById("reinicio");
 
-while(tipoDolar != "ESC"){
-    document.getElementById("pesosHtml").innerHTML = `Pesos: $${pesos}`;  
-    alert(`$${pesos} USD son $${dolar(pesos, tipoDolar, nameVerif(tipoDolar))} ARS al cambio ${tipoDolar}`);
-    document.getElementById("usdHtml").innerHTML = `Usd: $${dolar(pesos, tipoDolar, nameVerif(tipoDolar))}`;
-    tipoDolar = prompt(`Ingrese el tipo de dolar al que quiere cambiar sus pesos: ${nombres.join(" - ")} (Ingrese ESC para salir del programa)`);
-    pesos = prompt("Ingrese, sin el simbolo $, la cantidad de dolares a cambiar");
-};
+    while(tipoDolar != "ESC"){
+        document.getElementById("pesosHtml").innerHTML = `Pesos: $${pesos}`;  
+        alert(`$${pesos} USD son $${dolar(pesos, tipoDolar, nameVerif(tipoDolar))} ARS al cambio ${tipoDolar}`);
+        document.getElementById("usdHtml").innerHTML = `Usd: $${dolar(pesos, tipoDolar, nameVerif(tipoDolar))}`;
+        tipoDolar = prompt(`Ingrese el tipo de dolar al que quiere cambiar sus pesos: ${nombres.join(" - ")} (Ingrese ESC para salir del programa)`);
+        pesos = prompt("Ingrese, sin el simbolo $, la cantidad de dolares a cambiar");
+    };
+
+miBtn.addEventListener("click", function(e) {
+    console.log("El boton fue clickeado");
+    const nodoTexto = document.createTextNode(`Los precios de los dolares son: ${oficial.nombre} = $${oficial.precio}, 
+                                                                                ${blue.nombre} = $${blue.precio},
+                                                                                y ${liqui.nombre} = $${liqui.precio}.`);
+    document.body.appendChild(nodoTexto);
+
+});
