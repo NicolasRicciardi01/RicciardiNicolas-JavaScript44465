@@ -7,12 +7,36 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Calculadora de dolares</h1>
-    <h2>Mire cuanto valen sus dolares al cambio actual, dolar blue o dolar liqui</h2>
-    <h3 id="pesosHtml">Pesos: $0</h3>
-    <h3 id="usdHtml">Usd: $0</h3>
-    <button id="reinicio" type="button">Ver precios</button>
+    <h1>Calculadora de divisas</h1>
+    <h2>Mire cuanto valen sus pesos al cambio actual, dolar blue o dolar liqui</h2>
+    <div class="cambio">
+        <select name="" id="moneda1">
+            <option value="ARS">ARS</option>
+            <option value="USDoficial" selected>USD OFICIAL</option>
+            <option value="USDblue">USD BLUE</option>
+            <option value="USDliqui">USD LIQUI</option>
+        </select>
+        <input type="number" id="cantidad1" placeholder="0" value="1">
+    </div>
+
+    <div class="contenedorBotonCambio">
+        <button class="btn" id="cambio">Cambio</button>
+        <div class="rate" id="rate"></div>
+    </div>
+
+    <div class="cambio2">
+        <select name="" id="moneda2">
+            <option value="ARS" selected>ARS</option>
+            <option value="USDoficial">USD OFICIAL</option>
+            <option value="USDblue">USD BLUE</option>
+            <option value="USDliqui">USD LIQUI</option>
+        </select>
+        <input type="number" id="cantidad2">
+    </div>
+
     <!-- Llamado al script -->
     <script src="./index.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
