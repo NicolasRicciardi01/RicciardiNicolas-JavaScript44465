@@ -57,4 +57,12 @@ cambio.addEventListener("click", () =>{
     tipoMoneda1.value = tipoMoneda2.value;
     tipoMoneda2.value = temp;
     calcular();
+
+    // Alerta
+    Swal.fire({
+        title: 'Hecho!',
+        text: 'Monedas intercambiadas',
+        icon: 'success',
+        confirmButtonText: 'Ok'
+    });
 })
