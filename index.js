@@ -2,23 +2,23 @@
 const divisas = `[
     {
         "nombre": "ARS",
-        "precio": 0.0071
-    },
-    {
-        "nombre": "USDoficial",
         "precio": 1
     },
     {
+        "nombre": "USDoficial",
+        "precio": 154           
+    },
+    {
         "nombre": "USDblue",
-        "precio": 1.94
+        "precio": 288
     },
     {
         "nombre": "USDliqui",
-        "precio": 2.01
+        "precio": 295
     }
 ]`
 
-// Lista de devisas como variable
+// Lista de devisas como variable array
 const jsonDivisas = JSON.parse(divisas);
 
 // Variables
@@ -44,8 +44,8 @@ function calcular(){
 
     rateEl.innerText = `1 ${moneda_1.nombre} = ${moneda_2.precio} ${moneda_2.nombre}`;  
 
-    if (moneda_1.nombre === "ARS" && moneda_2.nombre === "USDoficial"){
-        cantidadMoneda2.value = (cantidadMoneda1.value / 139).toFixed(2);
+    if (moneda_1.nombre != "ARS"){
+        cantidadMoneda2.value = ((cantidadMoneda1.value * moneda_1.precio) / moneda_2.precio).toFixed(2);
     } else {
         cantidadMoneda2.value = (cantidadMoneda1.value * moneda_2.precio).toFixed(2);
     }
