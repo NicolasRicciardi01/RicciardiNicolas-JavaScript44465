@@ -1,3 +1,13 @@
+/* fetch("https://api.bluelytics.com.ar/v2/latest")
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(error => console.log("ERROR")) */
+
+fetch("./JSON/divisas.json")
+    .then(res => res.json())
+    .then(data => console.log(data));
+
+
 // Lista de divisas a usar con su respectivo precio
 const divisas = `[
     {
@@ -19,6 +29,8 @@ const divisas = `[
 ]`
 
 // Lista de devisas como variable array
+const stringJson = JSON.stringify(fetch("./JSON/divisas.json"));
+console.log(stringJson);
 const jsonDivisas = JSON.parse(divisas);
 
 // Variables
