@@ -17,9 +17,10 @@
     }
 }
 
-
 body{
-    animation: background-pan 10s linear infinite;
+    background-color: black;
+    font-family: 'Courier New', monospace;
+    animation: background-pan 60s linear infinite;
     background: linear-gradient(
         to right,
         var(--g1),
@@ -42,6 +43,7 @@ body{
     height: 100vh;
     padding: 20px;
     margin: 0;
+    overflow: hidden;
 }
 
 .contenedorBotonCambio{
@@ -50,9 +52,37 @@ body{
 }
 
 .btn{
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
     margin: 10px;
+    border-radius: 5px;
 }
 
 .rate{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(180, 180, 180, 0.599);
     margin: 10px;
+}
+
+.programa{
+    border-radius: 10px;
+    background-color: rgba(144, 144, 144, 0.599);
+    padding: 50px;
+}
+
+select{
+    background-color: rgba(164, 250, 255, 0.439);
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+input{
+    background-color: rgba(164, 250, 255, 0.439);
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: right;
 }
