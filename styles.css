@@ -39,7 +39,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
     height: 100vh;
     padding: 20px;
     margin: 0;
@@ -70,6 +70,18 @@ body{
     border-radius: 10px;
     background-color: rgba(144, 144, 144, 0.599);
     padding: 50px;
+}
+
+.historial{
+    background-color: rgba(144, 144, 144, 0.599);
+    border-radius: 10px;
+    width: 500px;
+    margin-top: 10px;
+    padding: 10px;
+    height: 500px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
 }
 
 select{
